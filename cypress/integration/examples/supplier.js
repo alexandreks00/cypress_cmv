@@ -3,7 +3,7 @@ context('Basic tests', () => {
       cy.visit('https://dfehhdd9kceo0.cloudfront.net/')
     })
     it('logging in', () => {
-        cy.get('input[name= "username"]').type('vinhais')
+        cy.get('input[name= "username"]').type('customer.test')
         cy.get('input[name= "password"]').type('123456')
         cy.get('button').contains('Login').click()
         cy.get('a[href="/configuration"]').contains("Configurações").click()
@@ -25,6 +25,7 @@ context('Basic tests', () => {
         cy.wait(2000)
         cy.get('button').contains("Entregue").click()
         cy.wait(2000)
-
+        
+      
       })
 })
